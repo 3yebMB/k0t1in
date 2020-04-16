@@ -3,7 +3,7 @@ package dev.m13d.k0t1in.ui.main
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import dev.m13d.k0t1in.data.model.Repository
+import dev.m13d.k0t1in.data.Repository
 
 class MainViewModel : ViewModel() {
 
