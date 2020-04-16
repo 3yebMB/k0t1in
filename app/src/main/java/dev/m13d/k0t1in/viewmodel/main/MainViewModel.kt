@@ -1,4 +1,4 @@
-package dev.m13d.k0t1in.viewmodel
+package dev.m13d.k0t1in.viewmodel.main
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -13,8 +13,7 @@ class MainViewModel : ViewModel() {
 //        viewStateLiveData.value = MainViewState(Repository.getNotes())
         Repository.getNotes().observeForever {
             viewStateLiveData.value =
-                    viewStateLiveData.value?.copy(notes = it!!) ?:
-                            MainViewState(it!!)
+                    viewStateLiveData.value?.copy(notes = it!!) ?: MainViewState(it!!)
         }
     }
 
