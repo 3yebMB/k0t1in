@@ -35,8 +35,10 @@ class NoteViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     private val body = itemView.findViewById<TextView>(R.id.body)
 
     fun bind(note: Note) {
-        title.text = note.title
-        body.text = note.note
-        itemView.setBackgroundColor(note.colour)
+        with(note) {
+            this@NoteViewHolder.title.text = title
+            body.text = this.note
+            itemView.setBackgroundColor(with(note) {colour})
+        }
     }
 }
