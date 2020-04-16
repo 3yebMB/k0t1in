@@ -1,9 +1,10 @@
-package dev.m13d.k0t1in
+package dev.m13d.k0t1in.ui.main
 
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import dev.m13d.k0t1in.R
 
 class MainActivity: AppCompatActivity() {
 
