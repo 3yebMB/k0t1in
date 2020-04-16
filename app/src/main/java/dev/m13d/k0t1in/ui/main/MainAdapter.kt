@@ -27,7 +27,6 @@ class MainAdapter : RecyclerView.Adapter<NoteViewHolder>() {
     override fun onBindViewHolder(holder: NoteViewHolder, position: Int): Unit {
         holder.bind(notes[position])
     }
-
 }
 
 class NoteViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

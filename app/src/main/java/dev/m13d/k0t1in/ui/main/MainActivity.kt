@@ -1,11 +1,9 @@
 package dev.m13d.k0t1in.ui.main
 
 import android.os.Bundle
-import android.view.View
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
+import androidx.lifecycle.ViewModelProvider
 import dev.m13d.k0t1in.R
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -18,12 +16,11 @@ class MainActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
-        viewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
         adapter = MainAdapter()
         mainRecycler.adapter = adapter
         viewModel.viewState().observe(this, Observer<MainViewState> { t ->
             t?.let { adapter.notes = it.notes }
         })
     }
-
 }
