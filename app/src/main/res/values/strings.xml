@@ -3,4 +3,5 @@
     <string name="push_me">Push Me</string>
     <string name="text1">Я Kotlin бы выучил только за то, что на нем разрабатывал Вортон!</string>
     <string name="text2">Geekbrains + Kotlin forever</string>
+    <string name="notes_text">Текст заметки</string>
 </resources>
