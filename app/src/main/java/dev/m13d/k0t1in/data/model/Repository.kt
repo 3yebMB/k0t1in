@@ -1,9 +1,7 @@
-package dev.m13d.k0t1in.data
-
-import dev.m13d.k0t1in.data.model.Note
+package dev.m13d.k0t1in.data.model
 
 object Repository {
-    private val notes: List<Note> = listOf(
+    val notes = listOf(
             Note("Моя первая заметка",
             "Kotlin очень краткий, но при этом выразительный язык",
             0xfff06292.toInt()),
@@ -27,7 +25,4 @@ object Repository {
             0xffff6e40.toInt())
     )
 
-    fun getNote(): List<Note> {
-        return notes
-    }
 }
