@@ -9,12 +9,14 @@ import android.text.TextWatcher
 import android.view.MenuItem
 import androidx.lifecycle.ViewModelProvider
 import dev.m13d.k0t1in.R
-import dev.m13d.k0t1in.model.Colour
+import dev.m13d.k0t1in.extensions.format
+import dev.m13d.k0t1in.extensions.getColorInt
 import dev.m13d.k0t1in.model.Note
 import dev.m13d.k0t1in.ui.base.BaseActivity
 import dev.m13d.k0t1in.viewmodel.note.NoteViewModel
 import dev.m13d.k0t1in.viewmodel.note.NoteViewState
 import kotlinx.android.synthetic.main.activity_note.*
+import kotlinx.android.synthetic.main.item_note.*
 import java.util.*
 
 private const val SAVE_DELAY = 2000L
@@ -80,19 +82,11 @@ class NoteActivity : BaseActivity<Note?, NoteViewState>() {
     private fun createNewNote(): Note = Note(UUID.randomUUID().toString(), titleEt.text.toString(), bodyEt.text.toString())
 
     private fun initView() {
-        if (note != null) {
-            titleEt.setText(note?.title ?: "")
-            bodyEt.setText(note?.note ?: "")
-            val colour = when (note!!.color) {
-                Colour.WHITE -> R.color.color_white
-                Colour.VIOLET -> R.color.color_violet
-                Colour.YELLOW -> R.color.color_yello
-                Colour.RED -> R.color.color_red
-                Colour.PINK -> R.color.color_pink
-                Colour.GREEN -> R.color.color_green
-                Colour.BLUE -> R.color.color_blue
-            }
-            toolbar.setBackgroundColor(resources.getColor(colour))
+        note?.run {
+            supportActionBar?.title = lastChanged.format()
+            titleEt.setText(title)
+            bodyEt.setText(body.toString())
+            toolbar.setBackgroundColor(color.getColorInt(this@NoteActivity))
         }
     }
 
