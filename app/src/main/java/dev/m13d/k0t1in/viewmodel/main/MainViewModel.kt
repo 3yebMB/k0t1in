@@ -14,11 +14,9 @@ class MainViewModel(private val repository: Repository = Repository) : BaseViewM
             if (t == null) return
             when (t) {
                 is NoteResult.Success<*> -> {
-// Может понадобиться вручную импортировать класс ​data.model.NoteResult.Success
                     viewStateLiveData.value = MainViewState(notes = t.data as? List<Note>)
                 }
                 is Error -> {
-// Может понадобиться вручную импортировать класс ​data.model.NoteResult.Error
                     viewStateLiveData.value = MainViewState(error = t.error)
                 }
             }
