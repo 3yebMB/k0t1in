@@ -12,4 +12,8 @@
     сможете получить к ним доступ после авторизации.</string>
     <string name="logout_dialog_cancel">Отмена</string>
     <string name="logout_menu_title">Logout</string>
+    <string name="email_hint">email</string>
+    <string name="password_hint">password</string>
+    <string name="signup_btn">Signup</string>
+    <string name="login_btn">Login</string>
 </resources>
