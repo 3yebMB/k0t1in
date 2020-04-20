@@ -5,4 +5,5 @@
     <string name="text2">Geekbrains + Kotlin forever</string>
     <string name="notes_text">Текст заметки</string>
     <string name="new_note_title">New note title</string>
+    <string name="ok_bth_title">Ok</string>
 </resources>

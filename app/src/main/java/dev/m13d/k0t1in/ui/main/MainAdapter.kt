@@ -39,7 +39,7 @@ class MainAdapter(private val onItemClickListener: OnItemClickListener) : Recycl
         fun bind(note: Note) {
             title.text = note.title
             body.text = note.note
-            val color = when(note.colour) {
+            val color = when(note.color) {
                 Colour.WHITE -> R.color.color_white
                 Colour.VIOLET -> R.color.color_violet
                 Colour.YELLOW -> R.color.color_yello

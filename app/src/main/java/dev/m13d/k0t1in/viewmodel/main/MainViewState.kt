@@ -1,6 +1,6 @@
 package dev.m13d.k0t1in.viewmodel.main
 
-import androidx.lifecycle.LiveData
 import dev.m13d.k0t1in.model.Note
+import dev.m13d.k0t1in.ui.base.BaseViewState
 
-data class MainViewState(val notes: List<Note>)
+class MainViewState(notes: List<Note>? = null, error: Throwable? = null): BaseViewState<List<Note>?>(notes, error)
