@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/margin_for_CardView"
     android:layout_marginStart="@dimen/margin_for_CardView"
     android:layout_marginTop="@dimen/margin_for_CardView"
-    android:layout_marginEnd="@dimen/margin_for_CardView"
     android:layout_marginBottom="@dimen/margin_for_CardView"
     tools:backgroundTint="@android:color/holo_purple">
 
@@ -20,9 +20,9 @@
             style="@style/TextAppearance.AppCompat.Title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_for_TextView"
             android:layout_marginStart="@dimen/margin_for_TextView"
             android:layout_marginTop="@dimen/margin_for_TextView"
-            android:layout_marginEnd="@dimen/margin_for_TextView"
             tools:text="@string/text2" />
 
         <TextView
@@ -32,6 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/margin_for_TextView"
             tools:text="@string/text1" />
+
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>
