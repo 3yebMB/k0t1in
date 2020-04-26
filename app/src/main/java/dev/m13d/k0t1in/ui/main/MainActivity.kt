@@ -62,17 +62,7 @@ class MainActivity : BaseActivity<List<Note>?, MainViewState>(),
             }
 
     private fun showLogoutDialog() {
-        supportFragmentManager.findFragmentByTag(LogoutDialog.TAG)
-                ?: LogoutDialog.createInstance().show(supportFragmentManager,
-                        LogoutDialog.TAG)
-    }
-
-    override fun onLogout() {
-        AuthUI.getInstance()
-                .signOut(this)
-                .addOnCompleteListener {
-                    startActivity(Intent(this, SplashActivity::class.java))
-                    finish()
-                }
+        supportFragmentManager.findFragmentByTag(LogoutDialog.TAG) ?:
+        LogoutDialog.createInstance().show(supportFragmentManager, LogoutDialog.TAG)
     }
 }
