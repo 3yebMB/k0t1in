@@ -16,4 +16,9 @@
     <string name="password_hint">password</string>
     <string name="signup_btn">Signup</string>
     <string name="login_btn">Login</string>
+    <string name="delete_menu_title">Delete</string>
+    <string name="change_color_menu_title">Change colour</string>
+    <string name="cancel_btn_title">Cancel</string>
+    <string name="delete_dialog_message">Are you sure want to delete the note?</string>
+    <string name="delete_dialog_title">Attention</string>
 </resources>

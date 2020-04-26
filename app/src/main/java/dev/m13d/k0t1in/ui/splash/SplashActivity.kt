@@ -1,17 +1,18 @@
 package dev.m13d.k0t1in.ui.splash
 
 import android.os.Handler
-import androidx.lifecycle.ViewModelProvider
 import dev.m13d.k0t1in.ui.base.BaseActivity
 import dev.m13d.k0t1in.ui.main.MainActivity
+import dev.m13d.k0t1in.viewmodel.splash.SplashViewModel
+import dev.m13d.k0t1in.viewmodel.splash.SplashViewState
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 private const val START_DELAY = 1000L
 
 class SplashActivity : BaseActivity<Boolean?, SplashViewState>() {
-    override val viewModel: SplashViewModel by lazy {
-        ViewModelProvider(this).get(SplashViewModel::class.java)
-    }
+    override val viewModel: SplashViewModel by viewModel()
     override val layoutRes: Int = dev.m13d.k0t1in.R.layout.activity_splash
+
     override fun onResume() {
         super.onResume()
         Handler().postDelayed({ viewModel.requestUser() }, START_DELAY)

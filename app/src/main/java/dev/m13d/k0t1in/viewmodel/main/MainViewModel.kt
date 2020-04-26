@@ -2,18 +2,18 @@ package dev.m13d.k0t1in.viewmodel.main
 
 import androidx.lifecycle.Observer
 import dev.m13d.k0t1in.model.Note
-import dev.m13d.k0t1in.model.NoteResult
+import dev.m13d.k0t1in.model.Result
 import dev.m13d.k0t1in.model.Repository
-import dev.m13d.k0t1in.ui.base.BaseViewModel
-import dev.m13d.k0t1in.model.NoteResult.Error
+import dev.m13d.k0t1in.viewmodel.base.BaseViewModel
+import dev.m13d.k0t1in.model.Result.Error
 
-class MainViewModel(private val repository: Repository = Repository) : BaseViewModel<List<Note>?, MainViewState>() {
-    private val notesObserver = object : Observer<NoteResult> {
-        //Стандартный обсервер LiveData
-        override fun onChanged(t: NoteResult?) {
+class MainViewModel(private val repository: Repository) : BaseViewModel<List<Note>?, MainViewState>() {
+    private val notesObserver = object : Observer<Result> {
+        override fun onChanged(t: Result?) {
             if (t == null) return
             when (t) {
-                is NoteResult.Success<*> -> {
+                is Result.Success<*> -> {
+                    @Suppress("UNCHECKED_CAST")
                     viewStateLiveData.value = MainViewState(notes = t.data as? List<Note>)
                 }
                 is Error -> {
