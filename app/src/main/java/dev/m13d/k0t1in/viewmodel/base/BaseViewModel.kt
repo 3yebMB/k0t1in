@@ -1,4 +1,4 @@
-package dev.m13d.k0t1in.ui.base
+package dev.m13d.k0t1in.viewmodel.base
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

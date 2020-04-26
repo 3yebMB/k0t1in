@@ -1,6 +1,6 @@
-package dev.m13d.k0t1in.ui.splash
+package dev.m13d.k0t1in.viewmodel.splash
 
-import dev.m13d.k0t1in.ui.base.BaseViewState
+import dev.m13d.k0t1in.viewmodel.base.BaseViewState
 
 class SplashViewState(isAuth: Boolean? = null, error: Throwable? = null) :
-BaseViewState<Boolean?>(isAuth, error)
+    BaseViewState<Boolean?>(isAuth, error)

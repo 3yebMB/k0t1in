@@ -8,7 +8,8 @@ import androidx.core.view.ViewCompat
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class FABBehavior(context: Context, attributeSet: AttributeSet) : FloatingActionButton.Behavior(context, attributeSet) {
-    override fun onStartNestedScroll(coordinatorLayout: CoordinatorLayout, child: FloatingActionButton,
+    override fun onStartNestedScroll(coordinatorLayout: CoordinatorLayout,
+                                     child: FloatingActionButton,
                                      directTargetChild: View,
                                      target: View,
                                      axes: Int,
@@ -18,6 +19,7 @@ class FABBehavior(context: Context, attributeSet: AttributeSet) : FloatingAction
                 child, directTargetChild, target, axes, type)
     }
 
+    @Suppress("DEPRECATION")
     override fun onNestedScroll(coordinatorLayout: CoordinatorLayout,
                                 child: FloatingActionButton,
                                 target: View,

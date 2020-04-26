@@ -8,7 +8,7 @@ import java.util.*
 data class Note(val id: String = "",
                 val title: String = "",
                 val note: String = "",
-                val color: Colour = Colour.WHITE,
+                val color: Color = Color.WHITE,
                 val lastChanged: Date = Date()) : Parcelable {
 
     override fun equals(other: Any?): Boolean {
@@ -27,12 +27,12 @@ data class Note(val id: String = "",
     }
 }
 
-enum class Colour {
+enum class Color {
     WHITE,
     YELLOW,
     GREEN,
     BLUE,
     RED,
     VIOLET,
-    PINK
+    PINK;
 }

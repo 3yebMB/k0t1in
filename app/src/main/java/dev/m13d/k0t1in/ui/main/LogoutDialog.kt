@@ -13,15 +13,13 @@ class LogoutDialog : DialogFragment() {
     }
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog =
-            AlertDialog.Builder(context!!)
+            AlertDialog.Builder(requireContext())
                     .setTitle(R.string.logout_dialog_title)
                     .setMessage(R.string.logout_dialog_message)
                     .setPositiveButton(R.string.ok_bth_title) { _, _ ->
-                        (activity as LogoutListener).onLogout()
-                    }
+                        (activity as LogoutListener).onLogout() }
                     .setNegativeButton(R.string.logout_dialog_cancel) { _, _ ->
-                        dismiss()
-                    }
+                        dismiss() }
                     .create()
 
     interface LogoutListener {
