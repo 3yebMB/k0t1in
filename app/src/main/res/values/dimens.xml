@@ -6,6 +6,6 @@
     <dimen name="padding_linearLayout">16dp</dimen>
     <dimen name="padding_default">20dp</dimen>
     <dimen name="def_radius_dp">16dp</dimen>
-    <dimen name="def_stroke_width_dp">16dp</dimen>
+    <dimen name="def_stroke_width_dp">1dp</dimen>
     <dimen name="color_view_padding">8dp</dimen>
 </resources>

@@ -1,15 +1,16 @@
 package dev.m13d.k0t1in.ui.main
 
+import android.content.ContentProvider
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.annotation.ContentView
 import androidx.recyclerview.widget.RecyclerView
 import dev.m13d.k0t1in.R
 import dev.m13d.k0t1in.extensions.getColorInt
 import dev.m13d.k0t1in.model.Note
 import kotlinx.android.extensions.LayoutContainer
 import kotlinx.android.synthetic.main.item_note.*
-import kotlinx.android.synthetic.main.item_note.view.*
 
 class MainAdapter(private val onItemClickListener: (Note) -> Unit) : RecyclerView.Adapter<MainAdapter.NoteViewHolder>() {
 

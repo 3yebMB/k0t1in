@@ -16,7 +16,7 @@ private const val USERS_COLLECTION = "users"
 class FireStoreProvider(private val firebaseAuth: FirebaseAuth,
                         private val db: FirebaseFirestore) : RemoteDataProvider {
     private val TAG = " ${FireStoreProvider::class.java.simpleName}​:"
-    private val notesReference = db.collection(NOTES_COLLECTION)
+//    private val notesReference = db.collection(NOTES_COLLECTION)
     private val currentUser
         get() = FirebaseAuth.getInstance().currentUser
 
@@ -49,7 +49,7 @@ class FireStoreProvider(private val firebaseAuth: FirebaseAuth,
                                 Log.d(TAG, "Note $note​is saved")
                                 value = Result.Success(note)
                             }.addOnFailureListener {
-                                Log.d(TAG, "Error saving note $note, message: ${it.message}​")
+                                Log.d(TAG, "Error saving note $note, message: ${it.message}")
                                 throw it
                             }
                 } catch (e: Throwable) {
